@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bscfhilvkjj8"]
+
+[ext_resource type="Texture2D" uid="uid://16impxludx6a" path="res://resources/ui/black-rect.png" id="1_i71n2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i71n2"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i71n2"]
+texture = ExtResource("1_i71n2")
+region_rect = Rect2(2, 2, 96, 96)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vajuw"]
+texture = ExtResource("1_i71n2")
+region_rect = Rect2(2.20395, 2, 95.7961, 96)
+
+[resource]
+default_font_size = 20
+Button/styles/normal = SubResource("StyleBoxFlat_i71n2")
+MarginContainer/constants/margin_bottom = 20
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 20
+Panel/styles/panel = SubResource("StyleBoxTexture_i71n2")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_vajuw")
