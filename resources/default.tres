@@ -1,24 +1,37 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bscfhilvkjj8"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bscfhilvkjj8"]
 
-[ext_resource type="Texture2D" uid="uid://16impxludx6a" path="res://resources/ui/black-rect.png" id="1_i71n2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vajuw"]
+bg_color = Color(0.192425, 0.210597, 0.246937, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bl14"]
+bg_color = Color(0.192425, 0.210597, 0.246937, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i71n2"]
 bg_color = Color(0.156863, 0.172549, 0.203922, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i71n2"]
-texture = ExtResource("1_i71n2")
-region_rect = Rect2(2, 2, 96, 96)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwyus"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vajuw"]
-texture = ExtResource("1_i71n2")
-region_rect = Rect2(2.20395, 2, 95.7961, 96)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrfyl"]
+bg_color = Color(0.156863, 0.172549, 0.203922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqc3b"]
+bg_color = Color(0.212711, 0.232263, 0.271358, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44yck"]
+bg_color = Color(0.128344, 0.128344, 0.128344, 1)
 
 [resource]
 default_font_size = 20
+Button/styles/focus = SubResource("StyleBoxFlat_vajuw")
+Button/styles/hover = SubResource("StyleBoxFlat_7bl14")
 Button/styles/normal = SubResource("StyleBoxFlat_i71n2")
 MarginContainer/constants/margin_bottom = 20
 MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20
 MarginContainer/constants/margin_top = 20
-Panel/styles/panel = SubResource("StyleBoxTexture_i71n2")
-PanelContainer/styles/panel = SubResource("StyleBoxTexture_vajuw")
+Panel/styles/panel = SubResource("StyleBoxFlat_gwyus")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_hrfyl")
+ProgressBar/font_sizes/font_size = 16
+ProgressBar/styles/background = SubResource("StyleBoxFlat_eqc3b")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_44yck")

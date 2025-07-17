@@ -1,6 +1,10 @@
 extends Node2D
-@onready var player_info: RichTextLabel = %PlayerInfo
+
 @onready var dialogue: CanvasLayer = $Dialogue
+@onready var player_name: Label = %PlayerName
+@onready var player_health: ProgressBar = %PlayerHealth
+@onready var player_stamina: ProgressBar = %PlayerStamina
+@onready var player_mood: ProgressBar = %PlayerMood
 
 func _ready() -> void:
 	GmStates.connect("states_changed", on_player_states_changed)
@@ -10,4 +14,7 @@ func _ready() -> void:
 	dialogue.start(act, "start")
 	
 func on_player_states_changed() -> void:
-	player_info.text = GmStates.player.get_info()
+	player_name.text = GmStates.player.fullname
+	player_health.value = GmStates.player.states.health
+	player_stamina.value = GmStates.player.states.stamina
+	player_mood.value = GmStates.player.states.mood
