@@ -1,4 +1,4 @@
-extends Resource
+extends CharacterBody2D
 class_name Role
 
 @export var fullname: String = ""
